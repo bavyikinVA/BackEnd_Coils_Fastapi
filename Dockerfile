@@ -4,6 +4,10 @@ RUN mkdir server
 
 ADD main.py server/main.py
 
+ADD Models.py server/Models.py
+
+ADD utils.py server/utils.py
+
 ADD requirements.txt server/requirements.txt
 
 RUN pip install -r server/requirements.txt
