@@ -3,7 +3,7 @@ import urllib.request
 import json
 from utils import config_parser
 
-config = config_parser('config.txt')
+config = config_parser('../config.txt')
 
 base_url = f'http://{config['SERVER_HOST']}:{config['SERVER_PORT']}/api/coil/stats'
 

@@ -1,7 +1,7 @@
 import urllib.request
 from utils import config_parser
 
-config = config_parser('config.txt')
+config = config_parser('../config.txt')
 
 url = f'http://{config['SERVER_HOST']}:{config['SERVER_PORT']}/api/coil?id_min=3&id_max=5'
 

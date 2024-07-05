@@ -27,7 +27,7 @@ else:
     DATABASE_URL = config['DATABASE_URL_POSTGRES']
 
 
-def test_db_connection():
+def db_connection():
     try:
         engine = create_engine(DATABASE_URL)
         connection = engine.connect()
@@ -38,7 +38,7 @@ def test_db_connection():
         return False
 
 
-if not test_db_connection():
+if not db_connection():
     raise HTTPException(status_code=500, detail="Database not available")
 
 engine = create_engine(DATABASE_URL)
